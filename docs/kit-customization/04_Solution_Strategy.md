@@ -3,7 +3,7 @@
 ## 4.1 Core Ideas
 - Build the app as a **Shopify Remix App** with two extensions:
   - **Admin Extension** (Shopify Polaris): Configure which products are customizable and define allowed options.
-  - **Theme App Extension** (Liquid + CSS): Visual block in the storefront for customers to customize and buy products.
+  - **Theme App Extension** (Liquid): Visual block in the storefront for customers to customize and buy products.
 - Use **PostgreSQL + Prisma ORM** for persistence.
 - Ensure modular design for maintainability and future extensibility.
 
@@ -14,7 +14,7 @@
 - **Security**: Authentication via Shopify OAuth; input validation; blacklist for inappropriate names.
 
 ## 4.3 Technology Decisions
-- **Frontend**: Liquid + CSS for storefront UI; Shopify Polaris for admin UI.
+- **Frontend**: Liquid for storefront UI; Shopify Polaris for admin UI.
 - **Backend**: Remix + Node.js + TypeScript.
 - **Database**: PostgreSQL with Prisma.
 - **Deployment**: Containerized using Docker/Compose; final hosting on Accenture infrastructure.

@@ -12,7 +12,7 @@
 
 ## ADR-003: UI Frameworks
 - Context: Shopify Polaris required for admin; storefront must be flexible.
-- Decision: Use Polaris (Admin), Liquid + CSS (Storefront).
+- Decision: Use Polaris (Admin), Liquid (Storefront).
 - Status: Accepted.
 
 ## ADR-004: Security Constraints
