@@ -12,17 +12,21 @@
 		"start": "remix-serve ./build/server/index.js",
 		"docker-start": "npm run setup && npm run start",
 		"setup": "prisma generate && prisma migrate deploy",
-		"lint": "biome lint .",
-		"lint:fix": "biome lint . --write",
-		"format": "biome format . --write",
-		"format:check": "biome format .",
+		"lint": "biome lint ./app",
+		"lint:fix": "biome lint ./app --write",
+		"format:fix": "biome format ./app --write ; prettier -w ./extensions ./docs",
+		"format:check": "biome format ./app ; prettier -c ./extensions ./docs",
 		"check": "biome check . --write",
 		"shopify": "shopify",
 		"prisma": "prisma",
 		"graphql-codegen": "graphql-codegen",
 		"vite": "vite",
-		"prepare": "husky",
+		"prepare": "husky || true",
 		"prettier": "prettier"
+	},
+	"lint-staged": {
+		"**/*.{liquid,md}": "pnpm run prettier -w",
+		"**/*.{js,ts,tsx,jsx,json,css}": "biome format --write ; biome lint"
 	},
 	"type": "module",
 	"engines": {
@@ -85,10 +89,6 @@
 		"@graphql-codegen/typescript-operations": "4.5.0",
 		"minimatch": "9.0.5",
 		"vite": "^6.2.2"
-	},
-	"lint-staged": {
-		"**/*.{liquid}": "pnpm run prettier -- ./extensions",
-		"**/*.{js,ts,tsx,jsx,json,css}": "pnpm biome format --write ./app"
 	},
 	"author": "pablokolls"
 }
