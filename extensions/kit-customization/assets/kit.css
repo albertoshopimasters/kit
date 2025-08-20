@@ -2,118 +2,117 @@
 /* Exclusive component CSS needs to be into <style> tag in the snippet file */
 
 .kit-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 .kit-container-customization {
-    width: 100%;
-    min-width: 450px;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+	width: 100%;
+	min-width: 450px;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
 .kit-section {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 
 .kit-section-row {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .kit-section-header {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: space-between;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	align-items: flex-start;
+	justify-content: space-between;
 }
 
 .kit-section-header h2,
 h3 {
-    font-size: x-large;
+	font-size: x-large;
 }
 
 .kit-section-header h4 {
-    font-size: large;
+	font-size: large;
 }
 
 /* Kit-Personalization-Tabs */
 .kit-personalization-tabs {
-    background-color: var(--blue-light);
-    z-index: 0;
-    border-radius: 100vw;
-    flex-wrap: nowrap;
-    display: inline-flex;
-    width: 100%;
-    position: relative;
-    max-width: 350px;
+	background-color: var(--blue-light);
+	z-index: 0;
+	border-radius: 100vw;
+	flex-wrap: nowrap;
+	display: inline-flex;
+	width: 100%;
+	position: relative;
+	max-width: 350px;
 }
 
 .kit-personalization-tab {
-    -webkit-appearance: none;
-    appearance: none;
-    font: var(--normal-text-s-semibold);
-    font-size: 14px;
-    cursor: pointer;
-    width: 50%;
-    background-color: #0000;
-    border: none;
-    border-radius: 100vw;
-    position: relative;
-    height: 36px;
+	-webkit-appearance: none;
+	appearance: none;
+	font: var(--normal-text-s-semibold);
+	font-size: 14px;
+	cursor: pointer;
+	width: 50%;
+	background-color: #0000;
+	border: none;
+	border-radius: 100vw;
+	position: relative;
+	height: 36px;
 }
 
 .kit-personalization-tab.active {
-    color: var(--white);
-    background-color: var(--blue);
+	color: var(--white);
+	background-color: var(--blue);
 }
 
 .kit-personalization-tab-container {
-    display: none;
-    width: 100%;
-    gap: 12px;
+	display: none;
+	width: 100%;
+	gap: 12px;
 }
 
 .kit-personalization-tab-container.active {
-    display: flex;
+	display: flex;
 }
 
 /* Kit-Inputs */
 .kit-input-container {
-    position: relative;
-    flex: 1;
-    max-height: 54px;
-    ;
+	position: relative;
+	flex: 1;
+	max-height: 54px;
 }
 
 .kit-label {
-    font: var(--normal-text-xs-bold);
-    font-size: 12px;
-    color: var(--dark-blue);
-    background-color: var(--white);
-    border-radius: 4px;
-    padding: 0 .4rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(8px, -50%);
+	font: var(--normal-text-xs-bold);
+	font-size: 12px;
+	color: var(--dark-blue);
+	background-color: var(--white);
+	border-radius: 4px;
+	padding: 0 0.4rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(8px, -50%);
 }
 
 .kit-input {
-    height: 100%;
-    border: 1px solid var(--dark-blue);
-    font: var(--normal-text-m-regular);
-    font-size: 16px;
-    color: var(--dark-blue);
-    width: 100%;
-    border-radius: 4px;
-    padding: 1.4rem 1rem;
-    text-transform: uppercase;
+	height: 100%;
+	border: 1px solid var(--dark-blue);
+	font: var(--normal-text-m-regular);
+	font-size: 16px;
+	color: var(--dark-blue);
+	width: 100%;
+	border-radius: 4px;
+	padding: 1.4rem 1rem;
+	text-transform: uppercase;
 }

@@ -1,171 +1,171 @@
-@import './radio-element.css';
+@import "./radio-element.css";
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-  --page-width: 192rem;
+	--page-width: 192rem;
 
-  /* COLOR */
-  /* Primary colors */
-  --black: #000000;
-  --white: #ffffff;
-  --main-blue: #154284;
-  --dark-blue: #181733;
-  --bg-surface-3: #121127;
-  --blue: #0068ff;
-  --red: #ef1f46;
-  --orange-dark: #f64d1f;
-  --yellow: #fbc43f;
-  --yelow-dark: #fab50f;
-  --gold: #9c7b4b;
-  --blue-light: #e6f0ff;
-  --green-light: #E6FFE5;
-  --brand-blue: #0068ff;
-  --fg-disabled: #676d89;
+	/* COLOR */
+	/* Primary colors */
+	--black: #000000;
+	--white: #ffffff;
+	--main-blue: #154284;
+	--dark-blue: #181733;
+	--bg-surface-3: #121127;
+	--blue: #0068ff;
+	--red: #ef1f46;
+	--orange-dark: #f64d1f;
+	--yellow: #fbc43f;
+	--yelow-dark: #fab50f;
+	--gold: #9c7b4b;
+	--blue-light: #e6f0ff;
+	--green-light: #e6ffe5;
+	--brand-blue: #0068ff;
+	--fg-disabled: #676d89;
 
-  /* Grey scale */
-  --black-40: #666666;
-  --black-85: #d9d9d9;
-  --black-94: #f0f0f0;
+	/* Grey scale */
+	--black-40: #666666;
+	--black-85: #d9d9d9;
+	--black-94: #f0f0f0;
 
-  /* Grey scale */
-  --success: #009d69;
-  --info: #0068ff;
-  --warning: #fbc43f;
-  --error: #ef1f46;
+	/* Grey scale */
+	--success: #009d69;
+	--info: #0068ff;
+	--warning: #fbc43f;
+	--error: #ef1f46;
 
-  --gradient-1: linear-gradient(to right, var(--blue), var(--red));
-  --gradient-2: linear-gradient(175deg, var(--red) 7%, var(--blue) 88%);
-  --gradient-3: linear-gradient(165deg, var(--red) 7%, var(--blue) 88%);
+	--gradient-1: linear-gradient(to right, var(--blue), var(--red));
+	--gradient-2: linear-gradient(175deg, var(--red) 7%, var(--blue) 88%);
+	--gradient-3: linear-gradient(165deg, var(--red) 7%, var(--blue) 88%);
 
-  /* TYPOGRAPHY */
-  --normal-text-xs-regular: 1.2rem/1.6rem 'FCB-01-Regular';
-  --normal-text-xs-semibold: 1.2rem/1.6rem 'FCB-01-Semibold';
-  --normal-text-xs-bold: 1.2rem/1.6rem 'FCB-01-Bold';
+	/* TYPOGRAPHY */
+	--normal-text-xs-regular: 1.2rem / 1.6rem "FCB-01-Regular";
+	--normal-text-xs-semibold: 1.2rem / 1.6rem "FCB-01-Semibold";
+	--normal-text-xs-bold: 1.2rem / 1.6rem "FCB-01-Bold";
 
-  --normal-text-s-regular: 1.4rem/2rem 'FCB-01-Regular';
-  --normal-text-s-semibold: 1.4rem/2rem 'FCB-01-Semibold';
-  --normal-text-s-bold: 1.4rem/2rem 'FCB-01-Bold';
+	--normal-text-s-regular: 1.4rem / 2rem "FCB-01-Regular";
+	--normal-text-s-semibold: 1.4rem / 2rem "FCB-01-Semibold";
+	--normal-text-s-bold: 1.4rem / 2rem "FCB-01-Bold";
 
-  --normal-text-m-regular: 1.6rem/2.4rem 'FCB-01-Regular';
-  --normal-text-m-semibold: 1.6rem/2.4rem 'FCB-01-Semibold';
-  --normal-text-m-bold: 1.6rem/2.4rem 'FCB-01-Bold';
+	--normal-text-m-regular: 1.6rem / 2.4rem "FCB-01-Regular";
+	--normal-text-m-semibold: 1.6rem / 2.4rem "FCB-01-Semibold";
+	--normal-text-m-bold: 1.6rem / 2.4rem "FCB-01-Bold";
 
-  --normal-text-l-regular: 2rem/2.8rem 'FCB-01-Regular';
-  --normal-text-l-semibold: 2rem/2.8rem 'FCB-01-Semibold';
-  --normal-text-l-bold: 2rem/2.8rem 'FCB-01-Bold';
+	--normal-text-l-regular: 2rem / 2.8rem "FCB-01-Regular";
+	--normal-text-l-semibold: 2rem / 2.8rem "FCB-01-Semibold";
+	--normal-text-l-bold: 2rem / 2.8rem "FCB-01-Bold";
 
-  --normal-text-xl-regular: 2.4rem/3.2rem 'FCB-01-Regular';
-  --normal-text-xl-semibold: 2.4rem/3.2rem 'FCB-01-Semibold';
-  --normal-text-xl-bold: 2.4rem/3.2rem 'FCB-01-Bold';
+	--normal-text-xl-regular: 2.4rem / 3.2rem "FCB-01-Regular";
+	--normal-text-xl-semibold: 2.4rem / 3.2rem "FCB-01-Semibold";
+	--normal-text-xl-bold: 2.4rem / 3.2rem "FCB-01-Bold";
 
-  --normal-text-2xl-regular: 3.2rem/4rem 'FCB-01-Regular';
-  --normal-text-2xl-semibold: 3.2rem/4rem 'FCB-01-Semibold';
-  --normal-text-2xl-bold: 3.2rem/4rem 'FCB-01-Bold';
+	--normal-text-2xl-regular: 3.2rem / 4rem "FCB-01-Regular";
+	--normal-text-2xl-semibold: 3.2rem / 4rem "FCB-01-Semibold";
+	--normal-text-2xl-bold: 3.2rem / 4rem "FCB-01-Bold";
 
-  --normal-text-3xl-regular: 4rem/4.8rem 'FCB-01-Regular';
-  --normal-text-3xl-semibold: 4rem/4.8rem 'FCB-01-Semibold';
-  --normal-text-3xl-bold: 4rem/4.8rem 'FCB-01-Bold';
+	--normal-text-3xl-regular: 4rem / 4.8rem "FCB-01-Regular";
+	--normal-text-3xl-semibold: 4rem / 4.8rem "FCB-01-Semibold";
+	--normal-text-3xl-bold: 4rem / 4.8rem "FCB-01-Bold";
 
-  --condensed-text-s-regular: 1.4rem/2rem 'FCB-02-Regular';
-  --condensed-text-s-semibold: 1.4rem/2rem 'FCB-02-Semibold';
-  --condensed-text-s-bold: 1.4rem/2rem 'FCB-02-Bold';
+	--condensed-text-s-regular: 1.4rem / 2rem "FCB-02-Regular";
+	--condensed-text-s-semibold: 1.4rem / 2rem "FCB-02-Semibold";
+	--condensed-text-s-bold: 1.4rem / 2rem "FCB-02-Bold";
 
-  --condensed-text-l-regular: 2rem/2.8rem 'FCB-02-Regular';
-  --condensed-text-l-semibold: 2rem/2.8rem 'FCB-02-Semibold';
-  --condensed-text-l-bold: 2rem/2.8rem 'FCB-02-Bold';
+	--condensed-text-l-regular: 2rem / 2.8rem "FCB-02-Regular";
+	--condensed-text-l-semibold: 2rem / 2.8rem "FCB-02-Semibold";
+	--condensed-text-l-bold: 2rem / 2.8rem "FCB-02-Bold";
 
-  --condensed-text-xl-regular: 2.4rem/3.2rem 'FCB-02-Regular';
-  --condensed-text-xl-semibold: 2.4rem/3.2rem 'FCB-02-Semibold';
-  --condensed-text-xl-bold: 2.4rem/3.2rem 'FCB-02-Bold';
+	--condensed-text-xl-regular: 2.4rem / 3.2rem "FCB-02-Regular";
+	--condensed-text-xl-semibold: 2.4rem / 3.2rem "FCB-02-Semibold";
+	--condensed-text-xl-bold: 2.4rem / 3.2rem "FCB-02-Bold";
 
-  --condensed-text-2xl-regular: 3.2rem/4rem 'FCB-02-Regular';
-  --condensed-text-2xl-semibold: 3.2rem/4rem 'FCB-02-Semibold';
-  --condensed-text-2xl-bold: 3.2rem/4rem 'FCB-02-Bold';
+	--condensed-text-2xl-regular: 3.2rem / 4rem "FCB-02-Regular";
+	--condensed-text-2xl-semibold: 3.2rem / 4rem "FCB-02-Semibold";
+	--condensed-text-2xl-bold: 3.2rem / 4rem "FCB-02-Bold";
 
-  --condensed-text-3xl-regular: 4rem/4.8rem 'FCB-02-Regular';
-  --condensed-text-3xl-semibold: 4rem/4.8rem 'FCB-02-Semibold';
-  --condensed-text-3xl-bold: 4rem/4.8rem 'FCB-02-Bold';
+	--condensed-text-3xl-regular: 4rem / 4.8rem "FCB-02-Regular";
+	--condensed-text-3xl-semibold: 4rem / 4.8rem "FCB-02-Semibold";
+	--condensed-text-3xl-bold: 4rem / 4.8rem "FCB-02-Bold";
 
-  --condensed-text-4xl-regular: 4.8rem/5.6rem 'FCB-02-Regular';
-  --condensed-text-4xl-semibold: 4.8rem/5.6rem 'FCB-02-Semibold';
-  --condensed-text-4xl-bold: 4.8rem/5.6rem 'FCB-02-Bold';
+	--condensed-text-4xl-regular: 4.8rem / 5.6rem "FCB-02-Regular";
+	--condensed-text-4xl-semibold: 4.8rem / 5.6rem "FCB-02-Semibold";
+	--condensed-text-4xl-bold: 4.8rem / 5.6rem "FCB-02-Bold";
 
-  /* OTHER */
-  /* Spacing */
-  --spacing-01: 0.2rem;
-  --spacing-02: 0.4rem;
-  --spacing-03: 0.8rem;
-  --spacing-04: 1.2rem;
-  --spacing-05: 1.6rem;
-  --spacing-06: 2.4rem;
-  --spacing-07: 3.2rem;
-  --spacing-08: 4rem;
-  --spacing-09: 4.8rem;
+	/* OTHER */
+	/* Spacing */
+	--spacing-01: 0.2rem;
+	--spacing-02: 0.4rem;
+	--spacing-03: 0.8rem;
+	--spacing-04: 1.2rem;
+	--spacing-05: 1.6rem;
+	--spacing-06: 2.4rem;
+	--spacing-07: 3.2rem;
+	--spacing-08: 4rem;
+	--spacing-09: 4.8rem;
 
-  /* Border radius */
-  --radius-02: 0.4rem;
-  --radius-03: 0.8rem;
+	/* Border radius */
+	--radius-02: 0.4rem;
+	--radius-03: 0.8rem;
 
-  /* Duration */
-  --time-fast: 100ms;
-  --time-medium: 300ms;
-  --time-slow: 500ms;
+	/* Duration */
+	--time-fast: 100ms;
+	--time-medium: 300ms;
+	--time-slow: 500ms;
 
-  /* Timing funcions */
-  --ease-out-sine: cubic-bezier(0.39, 0.58, 0.57, 1);
+	/* Timing funcions */
+	--ease-out-sine: cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
 button {
-  appearance: auto;
-  text-rendering: auto;
-  letter-spacing: normal;
-  word-spacing: normal;
-  line-height: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: center;
-  cursor: default;
-  box-sizing: border-box;
-  margin: 0em;
-  padding-block: 1px;
-  padding-inline: 6px;
-  border-width: 2px;
-  border-style: outset;
-  border-image: initial;
+	appearance: auto;
+	text-rendering: auto;
+	letter-spacing: normal;
+	word-spacing: normal;
+	line-height: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: center;
+	cursor: default;
+	box-sizing: border-box;
+	margin: 0em;
+	padding-block: 1px;
+	padding-inline: 6px;
+	border-width: 2px;
+	border-style: outset;
+	border-image: initial;
 }
 
 input {
-  text-rendering: auto;
-  color: fieldtext;
-  letter-spacing: normal;
-  word-spacing: normal;
-  line-height: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  appearance: auto;
-  -webkit-rtl-ordering: logical;
-  cursor: text;
-  background-color: field;
-  margin: 0em;
-  padding: 1px 0px;
-  border-width: 2px;
-  border-style: inset;
-  border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  border-image: initial;
-  padding-block: 1px;
-  padding-inline: 2px;
+	text-rendering: auto;
+	color: fieldtext;
+	letter-spacing: normal;
+	word-spacing: normal;
+	line-height: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+	appearance: auto;
+	-webkit-rtl-ordering: logical;
+	cursor: text;
+	background-color: field;
+	margin: 0em;
+	padding: 1px 0px;
+	border-width: 2px;
+	border-style: inset;
+	border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+	border-image: initial;
+	padding-block: 1px;
+	padding-inline: 2px;
 }
 
 input:focus {
-  outline: none;
-  box-shadow: none;
+	outline: none;
+	box-shadow: none;
 }

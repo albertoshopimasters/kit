@@ -1,51 +1,51 @@
 {
-  "customization": {
-    "title": "Personaliza tu camiseta",
-    "products": {
-      "title": "Camiseta 3a equipacion",
-      "genders": {
-        "male": "Hombre",
-        "female": "Mujer",
-        "kid": "Niño/a",
-        "baby": "Bebe"
-      }
-    },
-    "sizes": {
-      "title": "Elige tu talla",
-      "guide": {
-        "title": "Guia de tallas"
-      }
-    },
-    "personalization": {
-      "title": "Personalizaion",
-      "tabs": {
-        "player": {
-          "title": "Jugador/a",
-        },
-        "custom": {
-          "title": "Tu nombre",
-          "name": {
-            "label": "Nombre",
-            "placeholder": "Tu nombre"
-          },
-          "number": {
-            "label": "Numero",
-            "placeholder": "00"
-          }
-        }
-      },
-      "selector": {
-        "title": "Elige tu jugador/a"
-      }
-    },
-    "competition": {
-      "title": "Elige tu parche de competicion"
-    },
-    "cart": {
-      "title": "Subtotal",
-      "button": {
-        "title": "Añadir a la cesta"
-      }
-    }
-  },
+	"customization": {
+		"title": "Personaliza tu camiseta",
+		"products": {
+			"title": "Camiseta 3a equipacion",
+			"genders": {
+				"male": "Hombre",
+				"female": "Mujer",
+				"kid": "Niño/a",
+				"baby": "Bebe"
+			}
+		},
+		"sizes": {
+			"title": "Elige tu talla",
+			"guide": {
+				"title": "Guia de tallas"
+			}
+		},
+		"personalization": {
+			"title": "Personalizaion",
+			"tabs": {
+				"player": {
+					"title": "Jugador/a"
+				},
+				"custom": {
+					"title": "Tu nombre",
+					"name": {
+						"label": "Nombre",
+						"placeholder": "Tu nombre"
+					},
+					"number": {
+						"label": "Numero",
+						"placeholder": "00"
+					}
+				}
+			},
+			"selector": {
+				"title": "Elige tu jugador/a"
+			}
+		},
+		"competition": {
+			"title": "Elige tu parche de competicion"
+		},
+		"cart": {
+			"title": "Subtotal",
+			"button": {
+				"title": "Añadir a la cesta"
+			}
+		}
+	}
 }

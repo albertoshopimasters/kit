@@ -1,6 +1,7 @@
 # 6. Runtime View
 
 ## 6.1 Typical Scenario: Customer Customizes and Buys a Shirt
+
 1. Customer opens product page in Shopify storefront.
 2. Theme Extension loads customization block.
 3. Block fetches available options from Remix Backend.
@@ -10,6 +11,7 @@
 7. Customer confirms selection → product variant with personalization is added to cart.
 
 ## 6.2 Admin Scenario: Configure Customizable Products
+
 1. Admin opens Shopify Admin dashboard.
 2. Admin navigates to Kit Customization App.
 3. Admin selects products and defines customization rules (options, restrictions, blacklist updates).
