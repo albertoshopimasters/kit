@@ -76,6 +76,9 @@ importers:
       '@shopify/api-codegen-preset':
         specifier: ^1.1.1
         version: 1.1.9(@types/node@22.17.2)(typescript@5.9.2)
+      '@shopify/prettier-plugin-liquid':
+        specifier: ^1.9.4
+        version: 1.9.4(prettier@3.6.2)
       '@types/eslint':
         specifier: ^9.6.1
         version: 9.6.1
@@ -1389,6 +1392,9 @@ packages:
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
+  '@shopify/liquid-html-parser@2.8.2':
+    resolution: {integrity: sha512-g8DRcz4wUj4Ttxm+rK1qPuvIV2/ZqlyGRcVytVMbUkrr/+eVL2yQI/jRGDMeOamkRqB3InuoOjF7nARH+o9UYQ==}
+
   '@shopify/network@3.3.0':
     resolution: {integrity: sha512-Lln7vglzLK9KiYhl9ucQFVM7ArlpUM21xkDriBX8kVrqsoBsi+4vFIjf1wjhNPT0J/zHMjky7jiTnxVfdm+xXw==}
     engines: {node: '>=18.12.0'}
@@ -1413,6 +1419,11 @@ packages:
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
+
+  '@shopify/prettier-plugin-liquid@1.9.4':
+    resolution: {integrity: sha512-Xo4KC44jzyEl2FeBJUOS6mvNbfhhgCxtPH3185wYv9f88TwnSQE2LuyI93B8UuMBfjjQ+4+mzjcL+/92Ldfa2g==}
+    peerDependencies:
+      prettier: ^2.0.0 || ^3.0.0
 
   '@shopify/shopify-api@11.14.1':
     resolution: {integrity: sha512-5VyQZyNhMN2PJLosA6OytYL1ENmdpqslcTcr1jFjGn6sEuxhXtLav+I74ygdL2iTdjEud4aDBZycgDVxPIH+uw==}
@@ -2954,6 +2965,9 @@ packages:
     resolution: {integrity: sha512-HVJyzUrLIL1c0QmviVh5E8VGyUS7xCFPS6yydaVd1UegW+ibV/CohqTH9MkOLDp5o+rb82DMo77PTuc9F/8GKw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
+  html-styles@1.0.0:
+    resolution: {integrity: sha512-cDl5dcj73oI4Hy0DSUNh54CAwslNLJRCCoO+RNkVo+sBrjA/0+7E/xzvj3zH/GxbbBLGJhE0hBe1eg+0FINC6w==}
+
   http-errors@2.0.0:
     resolution: {integrity: sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ==}
     engines: {node: '>= 0.8'}
@@ -3252,6 +3266,10 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
+  isobject@2.1.0:
+    resolution: {integrity: sha512-+OUdGJlgjOBZDfxnDjYYG6zp487z0JGNQq3cYQYg5f5hKR+syHMsaztzGeml/4kGG55CSpKSpWTY+jYGgsHLgA==}
+    engines: {node: '>=0.10.0'}
+
   isomorphic-ws@5.0.0:
     resolution: {integrity: sha512-muId7Zzn9ywDsyXgTIafTry2sV3nySZeUDe6YedVd1Hvuuep5AsIlqK+XefWpYTyJG5e503F2xIuT2lcU6rCSw==}
     peerDependencies:
@@ -3357,6 +3375,9 @@ packages:
   lilconfig@3.1.3:
     resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
     engines: {node: '>=14'}
+
+  line-column@1.0.2:
+    resolution: {integrity: sha512-Ktrjk5noGYlHsVnYWh62FLVs4hTb8A3e+vucNZMgPeAOITdshMSgv4cCZQeRDjm7+goqmo6+liZwTXo+U3sVww==}
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
@@ -3866,6 +3887,10 @@ packages:
 
   ohash@2.0.11:
     resolution: {integrity: sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ==}
+
+  ohm-js@16.6.0:
+    resolution: {integrity: sha512-X9P4koSGa7swgVQ0gt71UCYtkAQGOjciJPJAz74kDxWt8nXbH5HrDOQG6qBDH7SR40ktNv4x61BwpTDE9q4lRA==}
+    engines: {node: '>=0.12.1'}
 
   on-finished@2.3.0:
     resolution: {integrity: sha512-ikqdkGAAyf/X/gPhXGvfgAytDZtDbr+bkNUJ0N9h5MI/dmdgCs3l6hoHrcUv41sRKew3jIwrp4qQDXiK99Utww==}
@@ -6637,6 +6662,11 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
+  '@shopify/liquid-html-parser@2.8.2':
+    dependencies:
+      line-column: 1.0.2
+      ohm-js: 16.6.0
+
   '@shopify/network@3.3.0': {}
 
   '@shopify/polaris-icons@8.11.1(react@18.3.1)':
@@ -6658,6 +6688,12 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-fast-compare: 3.2.2
       react-transition-group: 4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+  '@shopify/prettier-plugin-liquid@1.9.4(prettier@3.6.2)':
+    dependencies:
+      '@shopify/liquid-html-parser': 2.8.2
+      html-styles: 1.0.0
+      prettier: 3.6.2
 
   '@shopify/shopify-api@11.14.1':
     dependencies:
@@ -8582,6 +8618,8 @@ snapshots:
     dependencies:
       lru-cache: 7.18.3
 
+  html-styles@1.0.0: {}
+
   http-errors@2.0.0:
     dependencies:
       depd: 2.0.0
@@ -8872,6 +8910,10 @@ snapshots:
 
   isexe@2.0.0: {}
 
+  isobject@2.1.0:
+    dependencies:
+      isarray: 1.0.0
+
   isomorphic-ws@5.0.0(ws@8.18.3):
     dependencies:
       ws: 8.18.3
@@ -8983,6 +9025,11 @@ snapshots:
       type-check: 0.4.0
 
   lilconfig@3.1.3: {}
+
+  line-column@1.0.2:
+    dependencies:
+      isarray: 1.0.0
+      isobject: 2.1.0
 
   lines-and-columns@1.2.4: {}
 
@@ -9662,6 +9709,8 @@ snapshots:
       es-object-atoms: 1.1.1
 
   ohash@2.0.11: {}
+
+  ohm-js@16.6.0: {}
 
   on-finished@2.3.0:
     dependencies:
