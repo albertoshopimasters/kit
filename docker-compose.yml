@@ -4,12 +4,12 @@ services:
   kit-app:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     container_name: kit-app
     ports:
       - "3000:3000"
     env_file:
-      - .env.dev
+      - .env
     environment:
       NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
     restart: unless-stopped

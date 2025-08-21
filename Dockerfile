@@ -1,10 +1,9 @@
-FROM node:18-alpine
+FROM node:18.20-alpine
 
-RUN apk add --no-cache openssl curl && \
-    corepack enable && \
-    corepack prepare pnpm@10.14.0 --activate
+RUN apk update && apk upgrade --no-cache \
+    && apk add --no-cache openssl curl
 
-EXPOSE 3000
+RUN corepack enable && corepack prepare pnpm@latest --activate
 
 WORKDIR /app
 
@@ -19,5 +18,7 @@ RUN pnpm remove @shopify/cli || true
 COPY . .
 
 RUN pnpm run build
+
+EXPOSE 3000
 
 CMD ["pnpm", "run", "docker-start"]
