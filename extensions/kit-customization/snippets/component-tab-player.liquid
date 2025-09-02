@@ -1,9 +1,14 @@
-{% comment %} Pending Mock Player List {% endcomment %}
+<!-- snippets/component-tab-player.liquid -->
 {% assign players = 'Lamine Yamal 10,Gavi 6,Pedro 8' | split: ','%}
 
-<div id="kit-tab-player" class="kit-personalization-tab-container">
+<div id="kit-tab-player" class="kit-personalization-tab-container active">
   <div class="kit-tab-content">
-    {% assign title = 'customization.personalization.selector.title' | t %}
-    {% render 'element-select', name: 'Player selector', default: title, options: players, selected: title %}
+    {% assign title = 'customization.personalization.selector.title' | t | default: 'Elige jugador/a' %}
+    {% render 'element-select', 
+      name: 'player-selector', 
+      default: title, 
+      options: players, 
+      selected: title 
+    %}
   </div>
 </div>

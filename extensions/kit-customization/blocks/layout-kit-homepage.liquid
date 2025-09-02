@@ -2,17 +2,39 @@
 {{ 'kit.css' | asset_url | stylesheet_tag }}
 {{ 'fonts.css' | asset_url | stylesheet_tag }}
 
-<div>
+<div class="kit-homepage-section">
   <h2>{{ 'customization.title' | t }}</h2>
   <div class="kit-container">
-    {% render 'block-media' %}
+    <!-- Contenedor del media/preview -->
+    <div class="kit-media-container">
+      {% render 'block-media' %}
+    </div>
+    
+    <!-- Panel de personalización -->
     <div class="kit-container-customization">
-      {% render 'block-equipment' %}
-      {% render 'block-gender' %}
-      {% render 'block-sizes' %}
-      {% render 'block-personalization' %}
-      {% render 'block-competition' %}
-      {% render 'block-add-to-cart' %}
+      <div class="customization-block">
+        {% render 'block-equipment' %}
+      </div>
+      
+      <div class="customization-block">
+        {% render 'block-gender' %}
+      </div>
+      
+      <div class="customization-block">
+        {% render 'block-sizes' %}
+      </div>
+      
+      <div class="customization-block">
+        {% render 'block-personalization' %}
+      </div>
+      
+      <div class="customization-block">
+        {% render 'block-competition' %}
+      </div>
+      
+      <div class="customization-block">
+        {% render 'block-add-to-cart' %}
+      </div>
     </div>
   </div>
 </div>

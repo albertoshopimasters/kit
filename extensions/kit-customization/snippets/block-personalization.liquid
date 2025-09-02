@@ -1,17 +1,52 @@
-{% assign section_title = 'customization.personalization.title' | t %}
+{% assign section_title = 'customization.personalization.title' | t | default: 'Personalización' %}
 
 <div class="kit-section">
-  {% render 'component-section-header', section_title: section_title, price_value: '+20€' %}
-  <div class="kit-personalization-tabs">
-    <button class="kit-personalization-tab active">
-      {{ 'customization.personalization.tabs.player.title' | t }}
-    </button>
-    <button class="kit-personalization-tab">
-      {{ 'customization.personalization.tabs.custom.title' | t }}
-    </button>
-  </div>
-  <div class="kit-tab-content">
-    {% render 'component-tab-player' %}
-    {% render 'component-tab-custom' %}
-  </div>
+ {% render 'component-section-header', section_title: section_title, price_value: '+20€' %}
+ 
+ <div class="kit-personalization-tabs">
+  <button class="kit-personalization-tab active" data-tab="player">
+   {{ 'customization.personalization.tabs.player.title' | t | default: 'Jugador/a' }}
+  </button>
+  <button class="kit-personalization-tab" data-tab="custom">
+   {{ 'customization.personalization.tabs.custom.title' | t | default: 'Tu nombre' }}
+  </button>
+ </div>
+ 
+ <div class="kit-tab-content">
+  {% render 'component-tab-player' %}
+  {% render 'component-tab-custom' %}
+ </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabButtons = document.querySelectorAll('.kit-personalization-tab');
+  const tabContainers = document.querySelectorAll('.kit-personalization-tab-container');
+  
+  function showTab(tabName) {
+    tabContainers.forEach(container => {
+      container.style.display = 'none';
+    });
+    
+    const targetContainer = document.getElementById('kit-tab-' + tabName);
+    if (targetContainer) {
+      targetContainer.style.display = 'block';
+    }
+  }
+  
+  showTab('player');
+  
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const targetTab = this.getAttribute('data-tab');
+      
+      tabButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      this.classList.add('active');
+      
+      showTab(targetTab);
+    });
+  });
+});
+</script>

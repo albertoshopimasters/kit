@@ -1,19 +1,11 @@
-<style>
-  .kit-equipment-item img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .kit-equipment-item.active span {
-    display: block;
-    border: 2px solid black;
-    width: 45px;
-    height: 0px;
-    margin-top: 4px;
-  }
-</style>
-
-<div class="kit-equipment-item active">
-  <img src="{{'../assets/shirt-mockup-render.png' | asset_url }}" alt="Mock Equipment Image" width="45" height="45">
+<!-- snippets/component-equipment-item.liquid SIN IMAGEN -->
+<div 
+  class="kit-equipment-item {% if equipment.active or is_first %}active{% endif %}"
+  data-type="{{ equipment.type | default: 'home' }}"
+  data-id="{{ equipment.id }}"
+  data-price="{{ equipment.price }}"
+  data-tooltip="{{ equipment.name | default: equipment.title }}"
+  onclick="selectEquipment(this)"
+>
   <span></span>
 </div>

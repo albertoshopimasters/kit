@@ -1,12 +1,124 @@
-{% comment %} Pending Mock Equipments {% endcomment %}
+<!-- snippets/block-equipment.liquid -->
+{% comment %} Equipment Section {% endcomment %}
 {% assign section_header = 'customization.products.title' | t %}
-{% assign equipments = '[]' %}
+
+<!-- Mock equipments con más datos -->
+{% assign equipments = '
+[
+  {
+    "id": "home",
+    "type": "home", 
+    "name": "1ª Equipación",
+    "title": "Camiseta Local",
+    "price": "119,99€",
+    "image": "shirt-home.png",
+    "active": true
+  },
+  {
+    "id": "away",
+    "type": "away",
+    "name": "2ª Equipación",
+    "title": "Camiseta Visitante", 
+    "price": "119,99€",
+    "image": "shirt-away.png"
+  },
+  {
+    "id": "third",
+    "type": "third",
+    "name": "3ª Equipación",
+    "title": "Camiseta Alternativa",
+    "price": "119,99€",
+    "image": "shirt-third.png"
+  },
+  {
+    "id": "fourth", 
+    "type": "fourth",
+    "name": "4ª Equipación",
+    "title": "Camiseta Especial",
+    "price": "124,99€",
+    "image": "shirt-fourth.png"
+  }
+]'%}
 
 <div class="kit-section">
-  {% render 'component-section-header', section_title: section_header, price_value: '119,99€' %}
-  <div>
-    {% for item in equipments %}
-      {% render 'component-equipment-item', equipment: item %}
+  {% render 'component-section-header', 
+    section_title: section_header, 
+    price_value: '119,99€' %}
+  
+  <div class="kit-equipment-container">
+    {% for equipment in equipments %}
+      {% render 'component-equipment-item', 
+        equipment: equipment,
+        is_first: forloop.first %}
     {% endfor %}
   </div>
 </div>
+
+<script>
+
+function selectEquipment(element) {
+
+  document.querySelectorAll('.kit-equipment-item').forEach(item => {
+    item.classList.remove('active', 'selecting');
+  });
+  
+
+  element.classList.add('selecting');
+  setTimeout(() => {
+    element.classList.remove('selecting');
+    element.classList.add('active');
+  }, 300);
+
+
+  const price = element.getAttribute('data-price');
+  const priceElement = document.querySelector('.element-price');
+  if (priceElement && price) {
+    priceElement.textContent = price;
+  }
+
+
+  document.dispatchEvent(new CustomEvent('equipmentChanged', {
+    detail: {
+      id: element.getAttribute('data-id'),
+      type: element.getAttribute('data-type'),
+      price: price,
+      name: element.getAttribute('data-tooltip'),
+      element: element
+    }
+  }));
+
+
+  updateEquipmentPreview(element.getAttribute('data-type'));
+}
+
+function updateEquipmentPreview(equipmentType) {
+  const mediaContainer = document.querySelector('.kit-media-container');
+  if (mediaContainer) {
+    mediaContainer.classList.remove('equipment-home', 'equipment-away', 'equipment-third', 'equipment-fourth');
+    mediaContainer.classList.add(`equipment-${equipmentType}`);
+  }
+  
+  const previewImage = document.querySelector('.kit-preview img');
+  if (previewImage) {
+    const selectedItem = document.querySelector('.kit-equipment-item.active img');
+    if (selectedItem) {
+      previewImage.src = selectedItem.src;
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const activeEquipment = document.querySelector('.kit-equipment-item.active');
+  if (!activeEquipment) {
+    const firstEquipment = document.querySelector('.kit-equipment-item');
+    if (firstEquipment) {
+      selectEquipment(firstEquipment);
+    }
+  }
+  
+  const currentActive = document.querySelector('.kit-equipment-item.active');
+  if (currentActive) {
+    updateEquipmentPreview(currentActive.getAttribute('data-type'));
+  }
+});
+</script>

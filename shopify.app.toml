@@ -3,7 +3,7 @@
 client_id = "e2adef69e045ba4ce9230d650542e31a"
 name = "kit"
 handle = "kit-2"
-application_url = "https://aims-has-photographers-silver.trycloudflare.com"
+application_url = "https://tales-visited-announces-vehicles.trycloudflare.com"
 embedded = true
 
 [build]
@@ -18,7 +18,7 @@ api_version = "2025-07"
 scopes = "write_products"
 
 [auth]
-redirect_urls = ["https://aims-has-photographers-silver.trycloudflare.com/auth/callback", "https://aims-has-photographers-silver.trycloudflare.com/auth/shopify/callback", "https://aims-has-photographers-silver.trycloudflare.com/api/auth/callback"]
+redirect_urls = ["https://tales-visited-announces-vehicles.trycloudflare.com/auth/callback", "https://tales-visited-announces-vehicles.trycloudflare.com/auth/shopify/callback", "https://tales-visited-announces-vehicles.trycloudflare.com/api/auth/callback"]
 
 [pos]
 embedded = false

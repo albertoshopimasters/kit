@@ -1,12 +1,15 @@
-<div id="kit-tab-custom" class="kit-personalization-tab-container active">
+<!-- snippets/component-tab-custom.liquid -->
+<div id="kit-tab-custom" class="kit-personalization-tab-container">
   <div class="kit-input-container">
-    <label class="kit-label" for="kit-name">{{- 'customization.personalization.tabs.custom.name.label' | t -}}</label>
+    <label class="kit-label" for="kit-name">
+      {{- 'customization.personalization.tabs.custom.name.label' | t | default: 'Nombre' -}}
+    </label>
     <input
       class="kit-input"
       type="text"
       id="kit-name"
       name="custom_name"
-      placeholder="{{- 'customization.personalization.tabs.custom.name.placeholder' | t -}}"
+      placeholder="{{- 'customization.personalization.tabs.custom.name.placeholder' | t | default: 'TU NOMBRE' -}}"
       inputmode="text"
       maxlength="12"
       pattern="[A-Za-zÜüÁáÉéÍíÓóÚúÀàÈèÌìÒòÙùÖöÑñÂâÊêÎîÔôÛûĈĉĜĝĞğĤĥĴĵŜŝČčÄäËëÏïÜüĆćÃãÕõÇç´^¨,.\s-]+"
@@ -14,7 +17,9 @@
   </div>
 
   <div class="kit-input-container">
-    <label class="kit-label" for="kit-number">{{- 'customization.personalization.tabs.custom.number.label' | t -}}</label>
+    <label class="kit-label" for="kit-number">
+      {{- 'customization.personalization.tabs.custom.number.label' | t | default: 'Número' -}}
+    </label>
     <input
       class="kit-input"
       type="text"
@@ -22,7 +27,7 @@
       name="custom_number"
       maxlength="2"
       pattern="\d{1,2}"
-      placeholder="{{- 'customization.personalization.tabs.custom.number.placeholder' | t -}}"
+      placeholder="{{- 'customization.personalization.tabs.custom.number.placeholder' | t | default: '00' -}}"
       inputmode="numeric"
       autocomplete="off"
     >
