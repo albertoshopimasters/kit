@@ -1,6 +1,6 @@
 {% assign genders = 'Hombre,Mujer,Niño/a,Bebe' | split: ',' %}
 
-<div class="container-radio-elements">
+<div class="container-radio-elements flex-layout">
   {% for gender in genders %}
     {% render 'element-radio',
       name: 'gender',

@@ -20,31 +20,41 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+ // Selecciona todos los botones y contenedores de las pestañas
   const tabButtons = document.querySelectorAll('.kit-personalization-tab');
   const tabContainers = document.querySelectorAll('.kit-personalization-tab-container');
-  
+
+  // Función para mostrar/ocultar los contenidos de las pestañas
   function showTab(tabName) {
+    // Primero, oculta todos los contenedores de las pestañas
     tabContainers.forEach(container => {
       container.style.display = 'none';
     });
-    
+ 
+    // Luego, muestra el contenedor de la pestaña que coincida con el nombre
     const targetContainer = document.getElementById('kit-tab-' + tabName);
     if (targetContainer) {
       targetContainer.style.display = 'block';
     }
   }
-  
-  showTab('player');
-  
+ 
+ // Establece el estado inicial: mostrar la pestaña del jugador por defecto
+showTab('player');
+
+// Agrega un "click listener" a cada botón de pestaña
   tabButtons.forEach(button => {
     button.addEventListener('click', function() {
       const targetTab = this.getAttribute('data-tab');
-      
+
+      // Remueve la clase 'active' de todos los botones
       tabButtons.forEach(btn => {
         btn.classList.remove('active');
       });
+
+      // Agrega la clase 'active' al botón clickeado
       this.classList.add('active');
-      
+
+      // Muestra el contenido de la pestaña correspondiente
       showTab(targetTab);
     });
   });

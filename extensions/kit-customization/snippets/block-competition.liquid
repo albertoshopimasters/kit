@@ -3,7 +3,7 @@
 
 <div class="kit-section">
   {% render 'component-section-header', section_title: section_header, price_value: '+00€' %}
-  <div class="container-radio-elements">
+  <div class="container-radio-elements flex-layout">
     {% for competition in competitions %}
       {% render 'element-radio',
         name: competition,
