@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+.kit-media-mobile {
+  display: none;
+}
+
 .kit-homepage-section {
   background: linear-gradient(135deg, #1606aa 0%, #dc2626 100%);
   min-height: 100vh;
@@ -22,24 +26,22 @@
 }
 
 .kit-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
 .kit-media-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 500px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-    padding: 40px;
-    width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  padding: 40px;
 }
 
 .kit-container-customization {
@@ -52,6 +54,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  justify-content: space-between;
 }
 
 .kit-section {
@@ -233,22 +236,24 @@
 }
 
 /* Estilos para la sección de tallas (layout de cuadrícula) */
-.kit-section .container-radio-elements {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  gap: 8px;
-  max-width: 500px;
+.kit-section .grid-layout {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  grid-template-columns: none !important; /* Anulamos la propiedad de grid */
+  overflow-x: auto !important;
+  padding-bottom: 8px !important;
+  gap: 8px !important;
 }
 
-.kit-section .radio-option {
+.kit-section .grid-layout .radio-option {
   padding: 0;
-  border-radius: 8px;
+  border-radius: 9999px;
   aspect-ratio: 1;
   min-height: 50px;
   width: 100%;
 }
 
-.kit-section .radio-option:hover:not(.is-disabled) {
+.kit-section .grid-layout .radio-option:hover:not(.is-disabled) {
   transform: scale(1.02);
 }
 
@@ -273,7 +278,7 @@
 .kit-personalization-tab {
   flex: 1;
   padding: 10px 16px;
-  background: white;
+  background: transparent;
   border: none;
   border-radius: 20px;
   font-size: 14px;
@@ -303,7 +308,9 @@
   width: 100%;
 }
 
-
+.kit-personalization-tab-container.active {
+  display: block;
+}
 
 /* Estilos para los inputs, selectores y sus contenedores */
 .kit-input-container {
@@ -441,58 +448,110 @@
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .kit-container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
+  
   .kit-homepage-section {
     padding: 20px 15px;
   }
+  
   .kit-homepage-section h2 {
     font-size: 2rem;
     margin-bottom: 30px;
   }
+  
   .kit-media-container {
-    min-height: 400px;
-    padding: 30px 20px;
+    display: none;
   }
-  .container-radio-elements {
-    gap: 6px;
+  
+  .kit-container-customization {
+    order: 1;
+    padding: 0;
   }
-  .radio-option {
-    padding: 10px 16px;
-    font-size: 13px;
-    min-height: 40px;
+
+  .kit-media-mobile {
+    display: block !important;
+    max-width: 300px;
+    margin: 20px auto 25px;
   }
-  .kit-equipment-container {
-    justify-content: center;
-    gap: 10px;
-  }
-  .kit-equipment-item span {
-    width: 45px;
-    height: 45px;
-  }
-  .kit-equipment-item::after {
-    width: 45px;
-  }
-  .kit-section .container-radio-elements {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    gap: 6px;
-    max-width: 400px;
-  }
-  .kit-section .radio-option {
-    min-height: 45px;
+  
+  .kit-input, .select-input {
+    padding: 12px 10px;
     font-size: 13px;
   }
-  .kit-personalization-tabs {
-    max-width: 100%;
-  }
+  
   .kit-personalization-tab {
     font-size: 13px;
     padding: 8px 12px;
   }
-  .kit-input, .select-input {
-    padding: 14px 10px;
+  
+  .kit-section-header h4 {
+    font-size: 1.2rem;
+  }
+  
+  .add-to-cart-button {
+    font-size: 1.1em;
+    padding: 14px 20px;
+  }
+
+  /* --- GÉNERO: Forzar una sola línea --- */
+  .container-radio-elements.flex-layout {
+    flex-wrap: nowrap !important;
+    gap: 4px !important;
+  }
+
+  /* --- TALLAS: Forzar una línea y ocultar barra de scroll --- */
+  .kit-section .container-radio-elements.grid-layout {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 4px !important;
+    overflow-x: hidden !important; /* <- LÍNEA AÑADIDA PARA OCULTAR LA BARRA */
+  }
+  .kit-section .grid-layout .radio-option {
+    flex: 1 1 0 !important;
+    padding: 8px 4px !important;
+    font-size: 12px !important;
+    border-radius: 9999px !important;
+    min-height: 40px !important;
+  }
+  
+  /* --- ESTILOS GENERALES PARA OTROS BOTONES --- */
+  .radio-option {
+    padding: 8px 14px;
     font-size: 13px;
+    min-height: 40px;
+  }
+  
+  .kit-section .container-radio-elements:not(.grid-layout) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex-direction: row;
+  }
+  
+  .kit-section .container-radio-elements:not(.grid-layout) .radio-option {
+    flex: 1 1 80px;
+    border-radius: 9999px;
+  }
+
+  .kit-personalization-tabs {
+    max-width: 100%;
+  }
+
+  .custom-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .custom-input-wrapper .container {
+    flex: 1;
+  }
+  
+  .custom-input-wrapper .container:last-child {
+      flex: 0 0 80px;
   }
 }
 
@@ -500,23 +559,9 @@
   .kit-homepage-section h2 {
     font-size: 1.5rem;
   }
-  .radio-option {
-    padding: 8px 14px;
-    font-size: 12px;
-    min-height: 36px;
-  }
-  .kit-equipment-item span {
-    width: 40px;
-    height: 40px;
-  }
-  .kit-equipment-item::after {
-    width: 40px;
-    height: 2px;
-  }
   .kit-section .container-radio-elements {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 4px;
-    max-width: 300px;
   }
   .kit-section .radio-option {
     min-height: 40px;
