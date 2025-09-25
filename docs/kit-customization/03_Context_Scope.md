@@ -17,11 +17,11 @@ Primary interactions:
 Main components and external systems:
 
 - **Shopify Storefront API**
-    - Provides product data, variants, prices, and stock.
-    - Handles add-to-cart functionality.
+  - Provides product data, variants, prices, and stock.
+  - Handles add-to-cart functionality.
 
 - **Shopify Admin API**
-    - Used minimally for authentication and listing products in admin.
+  - Used minimally for authentication and listing products in admin.
 
 ### System Context Diagram (textual)
 
@@ -31,6 +31,7 @@ Main components and external systems:
 - **Admin Extension** → communicates with **Remix Backend API** and **PostgreSQL database**.
 
 ### System Context Diagram (visual)
+
 ```mermaid
 C4Context
     title System Context diagram for Kit Customization App
@@ -56,4 +57,3 @@ C4Context
 
     UpdateRelStyle(Kit_Customization_App, Shopify_Storefront_API, $offsetX="-80", $offsetY="30")
 ```
-

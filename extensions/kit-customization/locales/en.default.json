@@ -17,10 +17,10 @@
       }
     },
     "personalization": {
-      "title": "Personalizacion",
+      "title": "Personalización",
       "tabs": {
         "player": {
-          "title": "Jugador/a",
+          "title": "Jugador/a"
         },
         "custom": {
           "title": "Tu nombre",
@@ -47,5 +47,5 @@
         "title": "Añadir a la cesta"
       }
     }
-  },
+  }
 }

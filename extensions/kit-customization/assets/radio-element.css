@@ -1,47 +1,47 @@
 /* Container Radio Elements */
 .container-radio-elements {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 6px;
-    max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 6px;
+	max-width: 100%;
 }
 
 /* Radio Element */
 .radio-option {
-    background-color: var(--blue-light);
-    color: var(--dark-blue);
-    border-radius: 100vw;
-    display: table;
-    margin: 0;
-    padding: 0.5rem 0.8rem;
-    width: 100%;
-    font: var(--normal-text-xs-semibold);
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-    max-height: 36px;
-    white-space: nowrap;
+	background-color: var(--blue-light);
+	color: var(--dark-blue);
+	border-radius: 100vw;
+	display: table;
+	margin: 0;
+	padding: 0.5rem 0.8rem;
+	width: 100%;
+	font: var(--normal-text-xs-semibold);
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	max-height: 36px;
+	white-space: nowrap;
 }
 
 .radio-option input {
-    display: none;
+	display: none;
 }
 
 .radio-option.is-active {
-    background: var(--blue);
-    color: #fff;
+	background: var(--blue);
+	color: #fff;
 }
 
 .radio-option.is-disabled {
-    color: #aaa;
-    background-color: #f0f0f0;
-    text-decoration: line-through;
+	color: #aaa;
+	background-color: #f0f0f0;
+	text-decoration: line-through;
 }
 
 .radio-option.style-1 {
-    font-size: 12px;
+	font-size: 12px;
 }
 
 .radio-option.style-2 {
-    font-size: 14px;
+	font-size: 14px;
 }

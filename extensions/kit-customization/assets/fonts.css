@@ -1,77 +1,83 @@
 @font-face {
-    font-family: 'FCB-01-Regular';
-    src: url('./fonts/FCBARCELONA-Regular-web.woff2') format('woff2'),
-        url('./fonts/FCBARCELONA-Regular-web.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    ascent-override: 100%;
+	font-family: "FCB-01-Regular";
+	src:
+		url("./fonts/FCBARCELONA-Regular-web.woff2") format("woff2"),
+		url("./fonts/FCBARCELONA-Regular-web.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	ascent-override: 100%;
 }
 
 @font-face {
-    font-family: 'FCB-01-Semibold';
-    src: url('./fonts/FCBARCELONA-Semibold-web.woff2') format('woff2'),
-        url('./fonts/FCBARCELONA-Semibold-web.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-    ascent-override: 100%;
+	font-family: "FCB-01-Semibold";
+	src:
+		url("./fonts/FCBARCELONA-Semibold-web.woff2") format("woff2"),
+		url("./fonts/FCBARCELONA-Semibold-web.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	ascent-override: 100%;
 }
 
 @font-face {
-    font-family: 'FCB-01-Bold';
-    src: url('./fonts/FCBARCELONA-Bold-web.woff2') format('woff2'),
-        url('./fonts/FCBARCELONA-Bold-web.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    ascent-override: 100%;
+	font-family: "FCB-01-Bold";
+	src:
+		url("./fonts/FCBARCELONA-Bold-web.woff2") format("woff2"),
+		url("./fonts/FCBARCELONA-Bold-web.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	ascent-override: 100%;
 }
 
 @font-face {
-    font-family: 'FCB-02-Regular';
-    src: url('./fonts/FCBARCELONACONDENSED-Regular.woff2') format('woff2'),
-        url('./fonts/FCBARCELONACONDENSED-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    ascent-override: 100%;
+	font-family: "FCB-02-Regular";
+	src:
+		url("./fonts/FCBARCELONACONDENSED-Regular.woff2") format("woff2"),
+		url("./fonts/FCBARCELONACONDENSED-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	ascent-override: 100%;
 }
 
 @font-face {
-    font-family: 'FCB-02-Semibold';
-    src: url('./fonts/FCBARCELONACONDENSED-SemiBold.woff2') format('woff2'),
-        url('./fonts/FCBARCELONACONDENSED-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-    ascent-override: 100%;
+	font-family: "FCB-02-Semibold";
+	src:
+		url("./fonts/FCBARCELONACONDENSED-SemiBold.woff2") format("woff2"),
+		url("./fonts/FCBARCELONACONDENSED-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	ascent-override: 100%;
 }
 
 @font-face {
-    font-family: 'FCB-02-Bold';
-    src: url('./fonts/FCBARCELONACONDENSED-Bold.woff2') format('woff2'),
-        url('./fonts/FCBARCELONACONDENSED-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    ascent-override: 100%;
+	font-family: "FCB-02-Bold";
+	src:
+		url("./fonts/FCBARCELONACONDENSED-Bold.woff2") format("woff2"),
+		url("./fonts/FCBARCELONACONDENSED-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	ascent-override: 100%;
 }
 
 @font-face {
-    font-family: 'FCBLaLiga';
-    src: url('./fonts/FCBLaLiga.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    ascent-override: 100%;
+	font-family: "FCBLaLiga";
+	src: url("./fonts/FCBLaLiga.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	ascent-override: 100%;
 }
 
 @font-face {
-    font-family: 'FCB-Play';
-    src: url('./fonts/FCB-Play.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    ascent-override: 100%;
+	font-family: "FCB-Play";
+	src: url("./fonts/FCB-Play.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	ascent-override: 100%;
 }

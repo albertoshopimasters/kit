@@ -1,4 +1,4 @@
-{% assign sizes = "XS,S,M,L,XL,2XL,3XL" | split: "," %}
+{% assign sizes = 'XS,S,M,L,XL,2XL,3XL' | split: ',' %}
 
 <div class="kit-section">
   <div class="kit-section-header">
@@ -10,7 +10,7 @@
   
   <div class="container-radio-elements grid-layout">
     {% for size in sizes %}
-      {% render 'element-radio', 
+ {% render 'element-radio', 
         name: 'size',
         value: size, 
         title: size, 
